@@ -3,7 +3,7 @@ import requests
 from itertools import product 
 
 URL= "http://127.0.0.1:8000/login"
-pana = "user1"
+pana = "user3"
 
 def intentar(p):
     datos = {"username": pana, "contrasena": p}
@@ -32,6 +32,6 @@ def bruteforce_itertools(alfabeto):
     return None
 
 if __name__== "__main__":
-    alfabeto = "abc123"
+    alfabeto = "abcps123"
     print("Iniciando....")
     bruteforce_itertools(alfabeto)

@@ -12,8 +12,8 @@ class User(SQLModel, table=True):
 
 db_users = [
     User(id=1, username="user1", contrasena="pass1"),
-    User(id=2, username="user2", contrasena="pass2"), 
-    User(id=3, username="user3", contrasena="pass3")
+    User(id=2, username="user2", contrasena="abc12"), 
+    User(id=3, username="user3", contrasena="21cba")
 ]
 
 
@@ -39,6 +39,7 @@ def un_user(user_id: int):
         if u.id == user_id: ###aqui  
             return u
     raise HTTPException(status_code=404, detail="Usuario no encontrado")
+
 
 
 #todos en lista 
@@ -78,3 +79,7 @@ def deletduser(user_id: int):
 #source venv/bin/activate
 #python -m pip install requests
 #fastapi dev
+
+## errores 
+
+#pip install sqlmodel 
